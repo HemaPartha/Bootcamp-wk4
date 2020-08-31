@@ -2,7 +2,7 @@ name := "bootcamp-wk4"
 
 version := "0.1"
 
-scalaVersion := "2.13.3"
+scalaVersion := "2.12.8"
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-http-spray-json" % "10.2.0",
   "org.scalatest" %% "scalatest" % "3.0.8" % Test,
