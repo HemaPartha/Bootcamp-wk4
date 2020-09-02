@@ -11,3 +11,5 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-stream-testkit" % "2.6.8" % Test,
   "com.typesafe.akka" %% "akka-http-testkit" % "10.2.0" % Test
 )
+enablePlugins(JavaAppPackaging)
+enablePlugins(DockerPlugin)

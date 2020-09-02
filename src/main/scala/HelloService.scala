@@ -5,8 +5,9 @@ import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.{Directives, Route}
 import akka.stream.ActorMaterializer
-
 import spray.json.DefaultJsonProtocol
+
+import scala.concurrent.Await
 
 
 case class Greetings(message: String)
@@ -41,10 +42,11 @@ object HttpService {
     implicit val actorMaterializer = ActorMaterializer()
 
     val route = new AkkaHttpService().routes()
-
-    Http().newServerAt("localhost", 1234).bind(route)
-
-    println("server started at 8080")
+    val port = 1234
+    val request = Http().newServerAt("localhost", port).bind(route)
+    import scala.concurrent.duration._
+     Await.result(request,10.seconds)
+    println(s"server started at ${port}")
   }
 
 }
