@@ -10,7 +10,7 @@ class AkkaHttpServiceSpec extends FlatSpec with Matchers with ScalatestRouteTest
   "The service" should "return status code 200" in {
 
     Get("/greet/hema") ~> new AkkaHttpService().routes() ~> check {
-      responseAs[String] shouldEqual   "{\"message\":\"Hello, hema\"}"
+      responseAs[String] shouldEqual   "{\"message\":\"ello, hema\"}"
     }
   }
   "The service" should "greet the given user" in {
