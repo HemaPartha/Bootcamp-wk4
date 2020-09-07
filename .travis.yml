@@ -1,10 +1,12 @@
 language: scala
+  sudo:requiredßdocker
 scala:
   - 2.12.8
 services:
   - docker
-jobs:
-    include:
-      - stage: publish-docker-image
-        script:
-          - "bash ./scripts/PublishDocker.sh"
+script:
+    - docker build --tag bootcamp-wk4
+    - docker run bootcamp-wk4
+after_script:
+    -docker images
+    -docker push hemaparthasarathy/bootcamp-wk4
