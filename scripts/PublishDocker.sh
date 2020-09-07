@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-sbt clean compile
-
-BUILD_NUMBER=1
 echo Publishing docker image........
 
 docker build -t bootcamp .

@@ -1,4 +1,4 @@
 FROM java:8
-WORKDIR /myApp
+
 ENTRYPOINT []
 CMD []
