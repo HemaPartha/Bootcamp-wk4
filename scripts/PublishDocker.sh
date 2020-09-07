@@ -6,5 +6,5 @@ docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 docker build -t bootcamp .
 docker images
-docker tag bootcamp hemaparthasarathy/bootcamp
+docker tag bootcamp hemaparthasarathy/bootcamp:$TRAVIS_BUILD_NUMBER
 docker push hemaparthasarathy/bootcamp:$TRAVIS_BUILD_NUMBER
