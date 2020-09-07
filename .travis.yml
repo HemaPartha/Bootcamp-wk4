@@ -5,8 +5,8 @@ scala:
 services:
   - docker
 script:
-    - docker build --t bootcamp-wk4
-    - docker run bootcamp-wk4
+    - docker build -t bootcamp-wk4
+  
 after_script:
     -docker images
     -docker push hemaparthasarathy/bootcamp-wk4
