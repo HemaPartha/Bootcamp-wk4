@@ -3,3 +3,8 @@ scala:
   - 2.12.8
 services:
   - docker
+jobs:
+    include:
+      - stage: publish-docker-image
+        script:
+          - "./scripts/PublishDocker.sh"
