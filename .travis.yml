@@ -1,5 +1,4 @@
 language: scala sudo:requiredßdocker
-echo $TRAVIS_BUILD_NUMBER
 scala:
   - 2.12.8
 services:
