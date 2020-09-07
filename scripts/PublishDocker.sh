@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo Publishing docker image........
-
+echo $TRAVIS_BUILD_NUMBER
 docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 echo $DOCKER_USERNAME
 docker build -t bootcamp .
