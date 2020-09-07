@@ -7,4 +7,4 @@ jobs:
     include:
       - stage: publish-docker-image
         script:
-          - "./scripts/PublishDocker.sh"
+          - "bash ./scripts/PublishDocker.sh"
