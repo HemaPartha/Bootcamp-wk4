@@ -1,7 +1,7 @@
 FROM java:8
 
 
-COPY ./target/scala-2.12/bootcamp_2.12-0.1.jar ./myApp/bootcamp-0.1.jar
+COPY ./target/scala-2.12/bootcamp-assembly-0.1.jar ./myApp/bootcamp-0.1.jar
 WORKDIR /myApp
 
 EXPOSE 1234
